@@ -513,70 +513,78 @@ def download_button_PDF():
 # Function for Getting Main Website PDF Data along with Embedded Links PDF Data
 def main_download_PDF_Files(link):
 
-    if link.endswith('pdf'):
-        if link.startswith("../../"):
-            link = link.replace("../../", 'https://csvtu.ac.in/ew/')
-        name = link.split('/')[-1]
-        name = name.replace(" ", "_")
-        link = link.replace(' ', '%20')
-        download_PDF(link, name)
+    try:
+        if link.endswith('pdf'):
+            if link.startswith("../../"):
+                link = link.replace("../../", 'https://csvtu.ac.in/ew/')
+            name = link.split('/')[-1]
+            name = name.replace(" ", "_")
+            link = link.replace(' ', '%20')
+            download_PDF(link, name)
 
-    # For Image Link
-    elif link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith(
-            'svg') or link.endswith('webp'):
-        st.write("This is an Image File.")
+        # For Image Link
+        elif link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith(
+                'svg') or link.endswith('webp'):
+            st.write("This is an Image File.")
 
-    else:
-        embed_link = []
-        embed_link = embedded_links(link)
-        if embed_link is not None and embed_link != []:
-            for l in embed_link:
-                if l.endswith('pdf'):
-                    if l.startswith("../../"):
-                        l = l.replace("../../", 'https://csvtu.ac.in/ew/')
-                    l = l.replace(' ', '%20')
-                    name = l.split('/')[-1]
-                    download_PDF(l, name)
+        else:
+            embed_link = []
+            embed_link = embedded_links(link)
+            if embed_link is not None and embed_link != []:
+                for l in embed_link:
+                    if l.endswith('pdf'):
+                        if l.startswith("../../"):
+                            l = l.replace("../../", 'https://csvtu.ac.in/ew/')
+                        l = l.replace(' ', '%20')
+                        name = l.split('/')[-1]
+                        download_PDF(l, name)
+
+    except:
+        st.write("An Error Occured or Website has no Image Files.")
 
 # Function 10
 # Function for Downloading Complete Website PDF Data along with Embedded Links Data
 # This also Fetches PDF Data of Links embedded within the embedded links
 def complete_download_PDF_Files(link):
 
-    global visited_links
+    try:
+        global visited_links
 
-    if link.endswith('pdf') and link not in visited_links:
-        if link.startswith("../../"):
-            link = link.replace("../../", 'https://csvtu.ac.in/ew/')
-        name = link.split('/')[-1]
-        name = name.replace(" ", "_")
-        link = link.replace(' ', '%20')
-        download_PDF(link, name)
-        visited_links.append(link)
+        if link.endswith('pdf') and link not in visited_links:
+            if link.startswith("../../"):
+                link = link.replace("../../", 'https://csvtu.ac.in/ew/')
+            name = link.split('/')[-1]
+            name = name.replace(" ", "_")
+            link = link.replace(' ', '%20')
+            download_PDF(link, name)
+            visited_links.append(link)
 
-    # For Image Link
-    elif link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith(
-            'svg') or link.endswith('webp'):
-        st.write("This is an Image File.")
+        # For Image Link
+        elif link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith(
+                'svg') or link.endswith('webp'):
+            st.write("This is an Image File.")
 
-    elif link not in visited_links and not link.endswith('pdf'):
-        embed_link = embedded_links(link)
+        elif link not in visited_links and not link.endswith('pdf'):
+            embed_link = embedded_links(link)
 
-        if embed_link is not None:
-            for l in embed_link:
-                if l.endswith('pdf'):
-                    if l.startswith("../../"):
-                        l = l.replace("../../", 'https://csvtu.ac.in/ew/')
-                    l = l.replace(' ', '%20')
-                    name = l.split('/')[-1]
-                    name = name.replace(" ", "_")
-                    download_PDF(l, name)
-                    visited_links.append(l)
-                else:
-                    download_PDF_Files(l)
+            if embed_link is not None:
+                for l in embed_link:
+                    if l.endswith('pdf'):
+                        if l.startswith("../../"):
+                            l = l.replace("../../", 'https://csvtu.ac.in/ew/')
+                        l = l.replace(' ', '%20')
+                        name = l.split('/')[-1]
+                        name = name.replace(" ", "_")
+                        download_PDF(l, name)
+                        visited_links.append(l)
+                    else:
+                        download_PDF_Files(l)
 
-    else:
-        pass
+        else:
+            pass
+
+    except:
+        st.write("An Error Occured or Website has no PDF Files.")
 
 # Function for downloading Image
 def download_Image(link, name):
@@ -606,101 +614,111 @@ def download_button_Image():
 # Function for Getting Main Website Image Data along with Embedded Links Image Data
 def main_download_Image_Files(link):
 
-    if link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith('svg') or link.endswith(
-            'webp'):
-        name = link.split('/')[-1]
-        name = name.replace(" ", "_")
-        link = link.replace(' ', '%20')
-        download_Image(link, name)
+    try:
+        if link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith(
+                'svg') or link.endswith(
+                'webp'):
+            name = link.split('/')[-1]
+            name = name.replace(" ", "_")
+            link = link.replace(' ', '%20')
+            download_Image(link, name)
 
-    # For Pdf Link
-    elif link.endswith('pdf'):
-        st.write("This is a PDF File.")
+        # For Pdf Link
+        elif link.endswith('pdf'):
+            st.write("This is a PDF File.")
 
-    else:
+        else:
 
-        soup = establish_Connection(link)
+            soup = establish_Connection(link)
 
-        if soup is not None:
-            # Find all the links on the webpage
-            links = soup.find_all('img')
+            if soup is not None:
+                # Find all the links on the webpage
+                links = soup.find_all('img')
 
-        # To Store Embedded link
-        embed_link = []
+                # To Store Embedded link
+                embed_link = []
 
-        if links is not None:
-            # Iterating through the links
-            for link in links:
-                # Creating an object and storing links
-                src = link.get('src')
+                if links is not None:
+                    # Iterating through the links
+                    for link in links:
+                        # Creating an object and storing links
+                        src = link.get('src')
 
-                # To ensure we are scraping the link
-                if src is not None and not src.startswith("#"):
-                    # Writing links to text file
-                    embed_link.append(src)
+                        # To ensure we are scraping the link
+                        if src is not None and not src.startswith("#"):
+                            # Writing links to text file
+                            embed_link.append(src)
 
-        if embed_link is not None and embed_link != []:
-            for l in embed_link:
-                if l.endswith('jpeg') or l.endswith('jpg') or l.endswith('png') or l.endswith(
-                        'svg') or l.endswith(
-                        'webp'):
-                    name = l.split('/')[-1]
-                    name = name.replace(" ", "_")
-                    l = l.replace(' ', '%20')
-                    download_Image(l, name)
-
+                    if embed_link is not None and embed_link != []:
+                        for l in embed_link:
+                            if l.endswith('jpeg') or l.endswith('jpg') or l.endswith('png') or l.endswith(
+                                    'svg') or l.endswith(
+                                'webp'):
+                                name = l.split('/')[-1]
+                                name = name.replace(" ", "_")
+                                l = l.replace(' ', '%20')
+                                download_Image(l, name)
+    except:
+        st.write("An Error Occured or Website has no Image Files.")
 
 # Function 12
 # Function for Downloading Complete Website Image Data along with Embedded Links Data
 # This also Fetches Image Data of Links embedded within the embedded links
 def complete_download_Image_Files(link):
-    global visited_links
 
-    if (link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith('svg') or link.endswith('webp')) and link not in visited_links:
-        name = link.split('/')[-1]
-        name = name.replace(" ", "_")
-        link = link.replace(' ', '%20')
-        download_Image(link, name)
+    try:
+        global visited_links
 
-    # For Pdf Link
-    elif link.endswith('pdf'):
-        st.write("This is a PDF File.")
+        if (link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith(
+                'svg') or link.endswith('webp')) and link not in visited_links:
+            name = link.split('/')[-1]
+            name = name.replace(" ", "_")
+            link = link.replace(' ', '%20')
+            download_Image(link, name)
 
-    elif link not in visited_links and not (link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith('svg') or link.endswith('webp')):
+        # For Pdf Link
+        elif link.endswith('pdf'):
+            st.write("This is a PDF File.")
 
-        soup = establish_Connection(link)
+        elif link not in visited_links and not (
+                link.endswith('jpeg') or link.endswith('jpg') or link.endswith('png') or link.endswith(
+                'svg') or link.endswith('webp')):
 
-        if soup is not None:
-            # Find all the links on the webpage
-            links = soup.find_all('img')
+            soup = establish_Connection(link)
 
-            if links is not None:
-                # To Store Embedded link
-                embed_link = []
+            if soup is not None:
+                # Find all the links on the webpage
+                links = soup.find_all('img')
 
-                # Iterating through the links
-                for link in links:
-                    # Creating an object and storing links
-                    src = link.get('src')
+                if links is not None:
+                    # To Store Embedded link
+                    embed_link = []
 
-                    # To ensure we are scraping the link
-                    if src is not None and not src.startswith("#"):
-                        # Writing links to text file
-                        embed_link.append(src)
+                    # Iterating through the links
+                    for link in links:
+                        # Creating an object and storing links
+                        src = link.get('src')
 
-            if embed_link is not None and embed_link != [""]:
-                for l in embed_link:
-                    if l.endswith('jpeg') or l.endswith('jpg') or l.endswith('png') or l.endswith(
-                            'svg') or l.endswith('webp'):
+                        # To ensure we are scraping the link
+                        if src is not None and not src.startswith("#"):
+                            # Writing links to text file
+                            embed_link.append(src)
 
-                        name = l.split('/')[-1]
-                        name = name.replace(" ", "_")
-                        l = l.replace(' ', '%20')
-                        download_Image(l, name)
-                    else:
-                        download_Image_Files(l)
-    else:
-        pass
+                if embed_link is not None and embed_link != [""]:
+                    for l in embed_link:
+                        if l.endswith('jpeg') or l.endswith('jpg') or l.endswith('png') or l.endswith(
+                                'svg') or l.endswith('webp'):
+
+                            name = l.split('/')[-1]
+                            name = name.replace(" ", "_")
+                            l = l.replace(' ', '%20')
+                            download_Image(l, name)
+                        else:
+                            download_Image_Files(l)
+        else:
+            pass
+    except:
+        st.write("An Error Occured or Website has No Image Files.")
 
 
 # First argument takes the title of the Selection Box
