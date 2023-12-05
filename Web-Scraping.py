@@ -625,9 +625,10 @@ def main_download_Image_Files(link):
             # Find all the links on the webpage
             links = soup.find_all('img')
 
+        # To Store Embedded link
+        embed_link = []
+
             if links is not None:
-                # To Store Embedded link
-                embed_link = []
 
                 # Iterating through the links
                 for link in links:
