@@ -1,5 +1,6 @@
 # Web-Scrapper-Functions
 Streamlit-based Python web scraper for text, images, and PDFs. User-friendly interface for quick data extraction from websites. Simplify your web scraping tasks effortlessly.
+
 ---
 # Mode of Execution Used <img src="https://th.bing.com/th/id/R.c936445e15a65dfdba20a63e14e7df39?rik=fqWqO9kKIVlK7g&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f58481537cef1014c0b5e4968.png&ehk=dtrTKn1QsJ3%2b2TFlSfLR%2fxHdNYHdrqqCUUs8voipcI8%3d&risl=&pid=ImgRaw&r=0" title="PyCharm" alt="PyCharm" width="40" height="40">&nbsp;<img src="https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png" title="Streamlit" alt="Streamlit" width="40" height="40">
 
@@ -66,6 +67,51 @@ You should be able to view the homepage of your app.
 7. Version can also be mentioned like this python==3.9.<br><br>
 8. When we mention version in the requirement file streamlit install all dependencies from there.<br><br>
 9. If everything went well our app will be deployed on web and you can share the link and access the app from all browsers.
+
+---
+
+## About Project :
+
+<p>Complete Description about the project and resources used.</p>
+
+--> **Embedded Links:**
+  Extracts and provides data related to embedded links within a website.<br><br>
+
+--> **Main Website Text Data:**
+  Gathers and presents the primary textual content from the main website.<br><br>
+
+--> **Main Website Text Data along with Embedded Links Text Data:**
+  Combines main website text data with information on embedded links.<br><br>
+
+--> **Complete Website Text Data:**
+  Retrieves and displays the entire textual content of the website.<br><br>
+
+--> **Main Website PDF Files Data:**
+  Retrieves and manages data associated with PDF files on the main website.<br><br>
+
+--> **Main Website PDF Data along with Embedded Links PDF Data:**
+  Integrates main website PDF data with information on embedded links within PDFs.<br><br>
+
+--> **Complete Website PDF Data:**
+  Captures and organizes the PDF data available across the entire website.<br><br>
+
+--> **Complete Website Text and PDF Data:**
+  Presents a comprehensive view of both textual and PDF data from the entire website.<br><br>
+
+--> **Download PDF Files From Main Website:**
+  Facilitates the selective download of PDF files from the main website.<br><br>
+
+--> **Download All PDF Files From Website:**
+  Enables the bulk download of all PDF files available on the website.<br><br>
+
+--> **Download Image Files From Main Website:**
+  Allows the selective download of image files from the main website.<br><br>
+
+--> **Download All Image Files From Website:**
+  Supports the bulk download of all image files present on the website.<br><br>
+
+--> Visit Website from : <a href="https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/">Web Scraper</a>
+
 
 ---
 # Libraries Used 📚 💻
