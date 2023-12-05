@@ -504,10 +504,15 @@ def download_PDF(link, name):
 # Button to Download Zip File which contains PDF Downloaded
 def download_button_PDF():
 
-    with open('Zip_File_PDF.zip', 'rb') as f:
-        st.download_button('Download ZIP', f,
-                           file_name= domain_name.capitalize() +  '_Zip_File_PDF.zip',
-                           mime='application/zip')
+    try:
+        with open('Zip_File_PDF.zip', 'rb') as f:
+            st.download_button('Download ZIP', f,
+                               file_name=domain_name.capitalize() + '_Zip_File_PDF.zip',
+                               mime='application/zip')
+
+
+    except:
+        st.write("Website has no PDF Files.")
 
 # Function 9
 # Function for Getting Main Website PDF Data along with Embedded Links PDF Data
@@ -540,7 +545,7 @@ def main_download_PDF_Files(link):
                         download_PDF(l, name)
 
     except:
-        st.write("An Error Occured or Website has no Image Files.")
+        st.write("An Error Occured or Website has no PDF Files.")
 
 # Function 10
 # Function for Downloading Complete Website PDF Data along with Embedded Links Data
@@ -605,10 +610,14 @@ def download_Image(link, name):
 # Button to Download Zip File which contains Images Downloaded
 def download_button_Image():
 
-    with open('Zip_File_Image.zip', 'rb') as f:
-        st.download_button('Download ZIP', f,
-                           file_name= domain_name.capitalize() +  '_Zip_File_Image.zip',
-                           mime='application/zip')
+    try:
+        with open('Zip_File_Image.zip', 'rb') as f:
+            st.download_button('Download ZIP', f,
+                               file_name=domain_name.capitalize() + '_Zip_File_Image.zip',
+                               mime='application/zip')
+
+    except:
+        st.write("Website has No Image Files.")
 
 # Function 11
 # Function for Getting Main Website Image Data along with Embedded Links Image Data
