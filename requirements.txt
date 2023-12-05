@@ -1,0 +1,6 @@
+streamlit
+requests
+bs4
+PyPDF2
+io
+zipfile
