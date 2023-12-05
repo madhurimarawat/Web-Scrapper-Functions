@@ -628,17 +628,16 @@ def main_download_Image_Files(link):
         # To Store Embedded link
         embed_link = []
 
-            if links is not None:
+        if links is not None:
+            # Iterating through the links
+            for link in links:
+                # Creating an object and storing links
+                src = link.get('src')
 
-                # Iterating through the links
-                for link in links:
-                    # Creating an object and storing links
-                    src = link.get('src')
-
-                    # To ensure we are scraping the link
-                    if src is not None and not src.startswith("#"):
-                        # Writing links to text file
-                        embed_link.append(src)
+                # To ensure we are scraping the link
+                if src is not None and not src.startswith("#"):
+                    # Writing links to text file
+                    embed_link.append(src)
 
         if embed_link is not None and embed_link != []:
             for l in embed_link:
