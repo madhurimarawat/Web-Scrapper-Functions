@@ -1,6 +1,11 @@
 # Web-Scrapper-Functions
 Streamlit-based Python web scraper for text, images, and PDFs. User-friendly interface for quick data extraction from websites. Simplify your web scraping tasks effortlessly.
 
+<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/madhurimarawat/Web-Scrapper-Functions/assets/105432776/69ecc1b4-f2c0-4a27-8ad5-59ed6a67628c" title = "Website Image" alt="Website Image"></a>
+<br><br>
+
+<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/madhurimarawat/Web-Scrapper-Functions/assets/105432776/885e212d-42dc-4530-a4c3-f4a3c8df59ab" title = "Text File Image" alt="Text File Image"></a>
+
 ---
 # Mode of Execution Used <img src="https://th.bing.com/th/id/R.c936445e15a65dfdba20a63e14e7df39?rik=fqWqO9kKIVlK7g&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f58481537cef1014c0b5e4968.png&ehk=dtrTKn1QsJ3%2b2TFlSfLR%2fxHdNYHdrqqCUUs8voipcI8%3d&risl=&pid=ImgRaw&r=0" title="PyCharm" alt="PyCharm" width="40" height="40">&nbsp;<img src="https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png" title="Streamlit" alt="Streamlit" width="40" height="40">
 
