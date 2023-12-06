@@ -135,7 +135,7 @@ def embedded_links(link):
                         embed_link.append(href)
 
                 # Option to download the text file
-                if embed_link is not None and embed_link != []:
+                if embed_link is not None:
                     if utility == 'Embedded Links':
                         fname = domain_name.capitalize() + "_Embedded_links_Website.txt"
                         save_to_file(embed_link, fname)
