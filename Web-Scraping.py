@@ -65,10 +65,10 @@ def establish_Connection(link):
         # Returning Soup object to use it later
         return soup
 
-    except Exception as e:
+    except:
         # If utitlity is embedded links or main website data we will notify the user about the failure
         if utility == "Embedded Links" or utility == 'Main Website Text Data' :
-            st.write(f"Connection to {link} cannot be established. Try with another Website,{e}")
+            st.write(f"Connection to {link} cannot be established. Try with another Website")
 
         # Else we will just pass or do nothing as we will use this function later in recursion and we do not need to
         # Notify user about each embedded website failure
@@ -154,8 +154,8 @@ def embedded_links(link):
                 if utility == 'Embedded Links':
                     st.write("Website Has No Embedded Links!!")
 
-    except Exception as e:
-        st.write(f"Website Has No Embedded Links!!,{e}")
+    except:
+        st.write("Website Has No Embedded Links!!")
 
 
 # Adding Variables for Visited Links so that we do not visit them again while scraping
