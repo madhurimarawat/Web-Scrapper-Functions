@@ -135,7 +135,7 @@ def embedded_links(link):
                         embed_link.append(href)
 
                 # Option to download the text file
-                if embed_link is not None:
+                if embed_link is not None and embed_link != []:
                     if utility == 'Embedded Links':
                         fname = domain_name.capitalize() + "_Embedded_links_Website.txt"
                         save_to_file(embed_link, fname)
@@ -154,8 +154,8 @@ def embedded_links(link):
                 if utility == 'Embedded Links':
                     st.write("Website Has No Embedded Links!!")
 
-    except:
-        st.write("Website Has No Embedded Links!!")
+    except exception as e:
+        st.write(f"Website Has No Embedded Links!!,{e}")
 
 
 # Adding Variables for Visited Links so that we do not visit them again while scraping
