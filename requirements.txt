@@ -1,5 +1,6 @@
 pip == 23.3.1
 streamlit == 1.26.0
 requests == 2.31.0
+lxml == 4.9.3
 bs4 == 0.0.1
 PyPDF2 == 3.0.1
