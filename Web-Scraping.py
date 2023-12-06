@@ -39,7 +39,12 @@ try:
     parsed_url = urlparse(link)
 
     # Split the domain by dots and get the first part
+    # For name after https
     domain_name = parsed_url.netloc.split('.')[0]
+
+    # If the Website has www in the start instead of domain name
+    if domain_name == 'www':
+        domain_name = domain_name = parsed_url.netloc.split('.')[1]
 
     st.write("Domain Name:", domain_name.capitalize())
 
