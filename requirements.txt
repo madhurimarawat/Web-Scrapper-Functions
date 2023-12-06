@@ -1,4 +1,4 @@
-requests
-bs4
-PyPDF2
+requests == 2.31.0
+bs4 == 4.12.2
+PyPDF2 == 3.0.1
 pip == 23.3.1
