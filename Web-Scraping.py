@@ -65,7 +65,7 @@ def establish_Connection(link):
         # Returning Soup object to use it later
         return soup
 
-    except exception as e:
+    except Exception as e:
         # If utitlity is embedded links or main website data we will notify the user about the failure
         if utility == "Embedded Links" or utility == 'Main Website Text Data' :
             st.write(f"Connection to {link} cannot be established. Try with another Website, {e} occurred")
@@ -154,7 +154,7 @@ def embedded_links(link):
                 if utility == 'Embedded Links':
                     st.write("Website Has No Embedded Links!!")
 
-    except exception as e:
+    except Exception as e:
         st.write(f"Website Has No Embedded Links!!,{e}")
 
 
