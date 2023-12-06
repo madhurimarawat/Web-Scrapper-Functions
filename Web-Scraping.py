@@ -68,7 +68,7 @@ def establish_Connection(link):
     except Exception as e:
         # If utitlity is embedded links or main website data we will notify the user about the failure
         if utility == "Embedded Links" or utility == 'Main Website Text Data' :
-            st.write(f"Connection to {link} cannot be established. Try with another Website, {e} occurred")
+            st.write(f"Connection to {link} cannot be established. Try with another Website,{e}")
 
         # Else we will just pass or do nothing as we will use this function later in recursion and we do not need to
         # Notify user about each embedded website failure
