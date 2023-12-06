@@ -1,7 +1,7 @@
 # Web-Scrapper-Functions
 Streamlit-based Python web scraper for text, images, and PDFs. User-friendly interface for quick data extraction from websites. Simplify your web scraping tasks effortlessly.
 
-<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/madhurimarawat/Web-Scrapper-Functions/assets/105432776/69ecc1b4-f2c0-4a27-8ad5-59ed6a67628c" title = "Website Image" alt="Website Image"></a>
+<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/madhurimarawat/Web-Scrapper-Functions/assets/105432776/c70d6403-d229-4b6f-b484-4645bc3ddd6c" title = "Website Image" alt="Website Image"></a>
 <br><br>
 
 <a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/madhurimarawat/Web-Scrapper-Functions/assets/105432776/885e212d-42dc-4530-a4c3-f4a3c8df59ab" title = "Text File Image" alt="Text File Image"></a>
@@ -131,6 +131,8 @@ pip install library_name
   <li><b>Streamlit:</b> Simplifies the creation of Python web applications, ideal for data scientists to effortlessly share interactive data visualizations.</li>
 
   <li><b>Requests:</b> Powerful Python module for HTTP requests, offering a streamlined API to integrate web services with ease.</li>
+
+  <li><b>Lxml:</b>Lxml is a powerful and efficient Python library for processing XML and HTML documents, providing a comprehensive toolkit for parsing, validating, and manipulating structured data.</li>
 
   <li><b>Beautiful Soup (bs4):</b> Python library for web scraping tasks, facilitating the extraction of valuable information from HTML and XML documents.</li>
 
