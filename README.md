@@ -92,10 +92,10 @@ You should be able to view the homepage of your app.
   Retrieves and displays the entire textual content of the website.<br><br>
 
 --> **Extract Text from PDF Link:**
-  Retrieves and extract data associated with PDF files using the PDF Link Provided.<br><br>
+  Retrieves and extract data of PDF file using the PDF Link Provided.<br><br>
 
 --> **Main Website PDF Data along with Embedded Links PDF Data:**
-  Integrates main website PDF data with information(text Extracted) from PDF Files in embedded links within Main Website.<br><br>
+ Merge Text data extracted from PDF file in the main website with PDF data extracted from embedded links.<br><br>
 
 --> **Complete Website PDF Data:**
   Captures and organizes the PDF data available across the entire website.<br><br>
