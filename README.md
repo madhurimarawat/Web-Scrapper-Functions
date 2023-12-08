@@ -80,13 +80,13 @@ You should be able to view the homepage of your app.
 <p>Complete Description about the project and resources used.</p>
 
 --> **Embedded Links:**
-  Extracts and provides data related to embedded links within a website.<br><br>
+  Extracts and provides embedded links within a website.<br><br>
 
 --> **Main Website Text Data:**
   Gathers and presents the primary textual content from the main website.<br><br>
 
 --> **Main Website Text Data along with Embedded Links Text Data:**
-  Combines main website text data with information on embedded links.<br><br>
+  Combines main website text data with text data from embedded links.<br><br>
 
 --> **Complete Website Text Data:**
   Retrieves and displays the entire textual content of the website.<br><br>
@@ -98,7 +98,7 @@ You should be able to view the homepage of your app.
  Merge Text data extracted from PDF file in the main website with PDF data extracted from embedded links.<br><br>
 
 --> **Complete Website PDF Data:**
-  Captures and organizes the PDF data available across the entire website.<br><br>
+  Captures and retrieves the PDF data available across the entire website.<br><br>
 
 --> **Complete Website Text and PDF Data:**
   Presents a comprehensive view of both textual and PDF data from the entire website.<br><br>
