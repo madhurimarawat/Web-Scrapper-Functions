@@ -341,8 +341,8 @@ def extract_text_from_pdf(url):
 
 
 # Function 5
-# For Gettting Main Website PDF File Data
-def main_website_PDF_data(link):
+# For Gettting Text From PDF Link
+def PDF_link_data(link):
 
     try:
 
@@ -352,7 +352,7 @@ def main_website_PDF_data(link):
             pdf_Data.append(extract_text_from_pdf(link))
 
             if pdf_Data is not None and pdf_Data != [""]:
-                fname = domain_name.capitalize() + "_Main_Website_PDF_Data.txt"
+                fname = domain_name.capitalize() + "_Link_PDF_Data.txt"
                 save_to_file(pdf_Data, fname)
                 button_Print(pdf_Data, "See Scraped Data")
 
@@ -365,10 +365,10 @@ def main_website_PDF_data(link):
             st.write("This is an Image File.")
 
         else:
-            st.write("Website has No PDF File.")
+            st.write("PDF is Unreadable or Link has no PDF File..")
 
     except:
-        st.write("Website has no PDF Files Data.")
+        st.write("PDF is Unreadable or Link has no PDF File.")
 
 
 
@@ -740,7 +740,7 @@ def complete_download_Image_Files(link):
 utility = st.selectbox("Utility: ",
                      ['Embedded Links', 'Main Website Text Data',
                       'Main Website Text Data along with Embedded Links Text Data',
-                      'Complete Website Text Data', 'Main Website PDF Files Data',
+                      'Complete Website Text Data', 'Extract Text from PDF Link',
                       'Main Website PDF Data along with Embedded Links PDF Data',
                       'Complete Website PDF Data', 'Complete Website Text and PDF Data',
                       'Download PDF Files From Main Website','Download All PDF Files From Website',
@@ -759,8 +759,8 @@ elif utility == 'Complete Website Text Data':
 elif utility == 'Main Website Text Data along with Embedded Links Text Data':
     main_website_text_embedded_link_text_Data(link)
 
-elif utility == 'Main Website PDF Files Data':
-    main_website_PDF_data(link)
+elif utility == 'Extract Text from PDF Link':
+    PDF_link_data(link)
 
 elif utility == 'Main Website PDF Data along with Embedded Links PDF Data':
     main_website_PDF_embedded_link_PDF_Data(link)
