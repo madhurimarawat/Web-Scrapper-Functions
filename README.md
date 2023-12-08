@@ -91,11 +91,11 @@ You should be able to view the homepage of your app.
 --> **Complete Website Text Data:**
   Retrieves and displays the entire textual content of the website.<br><br>
 
---> **Main Website PDF Files Data:**
-  Retrieves and manages data associated with PDF files on the main website.<br><br>
+--> **Extract Text from PDF Link:**
+  Retrieves and extract data associated with PDF files using the PDF Link Provided.<br><br>
 
 --> **Main Website PDF Data along with Embedded Links PDF Data:**
-  Integrates main website PDF data with information on embedded links within PDFs.<br><br>
+  Integrates main website PDF data with information(text Extracted) from PDF Files in embedded links within Main Website.<br><br>
 
 --> **Complete Website PDF Data:**
   Captures and organizes the PDF data available across the entire website.<br><br>
