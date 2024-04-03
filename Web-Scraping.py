@@ -63,7 +63,6 @@ except:
 # Send an HTTP request to the URL of the webpage we want to access
 # Defining Function for Requesting Access to link/Establishing Connection
 def establish_Connection(link):
-
     try:
         # Connecting to Website
         r = requests.get(link)
@@ -75,7 +74,7 @@ def establish_Connection(link):
 
     except:
         # If utitlity is embedded links or main website data we will notify the user about the failure
-        if utility == "Embedded Links" or utility == 'Main Website Text Data' :
+        if utility == "Embedded Links" or utility == 'Main Website Text Data':
             st.write(f"Connection to {link} cannot be established. Try with another Website")
 
         # Else we will just pass or do nothing as we will use this function later in recursion and we do not need to
@@ -83,22 +82,22 @@ def establish_Connection(link):
         else:
             pass
 
+
 # Scraping Text data from Website and rendering in a text file
 def save_to_file(text, fname):
-
     if text is not None:
         st.download_button(
-        label="Download Text File",
-        data='\n'.join(text),
-        file_name=fname,
-        key="download_button",
+            label="Download Text File",
+            data='\n'.join(text),
+            file_name=fname,
+            key="download_button",
         )
     else:
         st.write("Website has No Data!!")
 
-# Function for Printing Data Scraped
-def button_Print(text,statement):
 
+# Function for Printing Data Scraped
+def button_Print(text, statement):
     if text is not None:
         # Button for user to see data scraped without downloading
         # Create a button, that when clicked, shows a text
@@ -108,7 +107,6 @@ def button_Print(text,statement):
 
 # Function for Link Checking
 def link_Check(link):
-
     # For Pdf Link
     if link.endswith('pdf'):
         st.write("This is a PDF File.")
@@ -133,7 +131,7 @@ def embedded_links(link):
     try:
 
         # For Pdf and Image Link Checking
-        if link_Check(link)  == 1:
+        if link_Check(link) == 1:
 
             # Establishing Connection
             soup = establish_Connection(link)
@@ -182,10 +180,10 @@ def embedded_links(link):
 # Adding Variables for Visited Links so that we do not visit them again while scraping
 visited_links = []
 
+
 # Function 2
 # Gettting Main Website Text Data
 def main_website_text_Data(link):
-
     global visited_links
 
     try:
@@ -276,7 +274,6 @@ def main_website_text_embedded_link_text_Data(link):
 # Function for Getting Complete Website Data along with Embedded Links Data
 # This also Fetches Data of Links embedded within the embedded links
 def complete_text_data(link):
-
     try:
 
         # For Pdf and Image Link Checking
@@ -309,10 +306,10 @@ def complete_text_data(link):
         st.write("An error occurred or the website has no data!!")
         return ""
 
+
 # Function for Extracting Text from PDF File
 # It will only extract english text not able to extract hindi text
 def extract_text_from_pdf(url):
-
     global visited_links
 
     try:
@@ -346,7 +343,6 @@ def extract_text_from_pdf(url):
 # Function 5
 # For Gettting Text From PDF Link
 def PDF_link_data(link):
-
     try:
 
         pdf_Data = []
@@ -378,11 +374,9 @@ def PDF_link_data(link):
         st.write("PDF is Unreadable or Link has no PDF File.")
 
 
-
 # Function 6
 # For Gettting Main Website PDF File Data along with embedded PDF File Data
 def main_website_PDF_embedded_link_PDF_Data(link):
-
     global visited_links
     pdf_Data = []
 
@@ -402,7 +396,7 @@ def main_website_PDF_embedded_link_PDF_Data(link):
             if utility == "Main Website PDF Data along with Embedded Links PDF Data":
 
                 fname = domain_name.capitalize() + "_Main_Website_PDF_Data_Embedded_Links_PDF_Data.txt"
-                save_to_file(pdf_Data,fname)
+                save_to_file(pdf_Data, fname)
 
                 button_Print(pdf_Data, "See Scraped Data")
 
@@ -417,6 +411,7 @@ def main_website_PDF_embedded_link_PDF_Data(link):
 
     except:
         st.write("Website has no PDF Files Data.")
+
 
 # Function 7
 # Function for Getting Complete Website PDF Data along with Embedded Links Data
@@ -451,17 +446,16 @@ def complete_PDF_data(link):
         st.write("An error occurred or the website has no data!!")
         return ""
 
+
 # Function 8
 # Function for Getting Complete Website Text and PDF Data along with Embedded Links Data
 # This also Fetches Text and PDF Data of Links embedded within the embedded links
 def complete_text_pdf_Data(link):
-
     try:
         complete_text = []
 
         # For Pdf and Image Link Checking
         if link_Check(link) == 1:
-
             complete_text.append(complete_text_data(link))
             complete_text.append(complete_PDF_data(link))
 
@@ -476,9 +470,9 @@ def complete_text_pdf_Data(link):
     except:
         st.write("An error occurred or the website has no data!!")
 
+
 # Function for downloading PDF
 def download_PDF(link, name, zipf):
-
     try:
         response = requests.get(link)
         temp = name
@@ -499,9 +493,9 @@ def download_PDF(link, name, zipf):
     except:
         pass
 
+
 # Button to Download Zip File which contains PDF Downloaded
 def download_button_PDF():
-
     try:
         with open('Zip_File_PDF.zip', 'rb') as f:
             st.download_button('Download ZIP', f,
@@ -511,10 +505,10 @@ def download_button_PDF():
     except:
         st.write("Website has no PDF Files.")
 
+
 # Function 9
 # Function for Getting Main Website PDF Data along with Embedded Links PDF Data
-def main_download_PDF_Files(link,zipf):
-
+def main_download_PDF_Files(link, zipf):
     try:
         # Storing Type of link
         link_type = link_Check(link)
@@ -540,16 +534,16 @@ def main_download_PDF_Files(link,zipf):
                             l = l.replace("../../", 'https://csvtu.ac.in/ew/')
                         l = l.replace(' ', '%20')
                         name = l.split('/')[-1]
-                        download_PDF(l, name,zipf)
+                        download_PDF(l, name, zipf)
 
     except:
         st.write("An Error Occured or Website has no PDF Files.")
+
 
 # Function 10
 # Function for Downloading Complete Website PDF Data along with Embedded Links Data
 # This also Fetches PDF Data of Links embedded within the embedded links
 def complete_download_PDF_Files(link):
-
     try:
         global visited_links
 
@@ -592,13 +586,13 @@ def complete_download_PDF_Files(link):
     except:
         st.write("An Error Occured or Website has no PDF Files.")
 
+
 # Function for downloading Image
 def download_Image(link, name):
-
     try:
         response = requests.get(link)
 
-        with open(name , 'wb') as f:
+        with open(name, 'wb') as f:
             f.write(response.content)
 
         with zipfile.ZipFile('Zip_File_Image.zip', 'a') as zipf:
@@ -608,9 +602,9 @@ def download_Image(link, name):
     except:
         pass
 
+
 # Button to Download Zip File which contains Images Downloaded
 def download_button_Image():
-
     try:
         with open('Zip_File_Image.zip', 'rb') as f:
             st.download_button('Download ZIP', f,
@@ -620,10 +614,10 @@ def download_button_Image():
     except:
         st.write("Website has No Image Files.")
 
+
 # Function 11
 # Function for Getting Main Website Image Data along with Embedded Links Image Data
 def main_download_Image_Files(link):
-
     try:
 
         link_type = link_Check(link)
@@ -671,17 +665,17 @@ def main_download_Image_Files(link):
     except:
         st.write("An Error Occured or Website has no Image Files.")
 
+
 # Function 12
 # Function for Downloading Complete Website Image Data along with Embedded Links Data
 # This also Fetches Image Data of Links embedded within the embedded links
 def complete_download_Image_Files(link):
-
     try:
         global visited_links
 
         link_type = link_Check(link)
 
-        if link_type == "img"  and link not in visited_links:
+        if link_type == "img" and link not in visited_links:
             name = link.split('/')[-1]
             name = name.replace(" ", "_")
             link = link.replace(' ', '%20')
@@ -737,78 +731,81 @@ def remove_files(fname):
     except:
         pass
 
-# First argument takes the title of the Selection Box
-# Second argument takes options
-utility = st.selectbox("Utility: ",
-                     ['Embedded Links', 'Main Website Text Data',
-                      'Main Website Text Data along with Embedded Links Text Data',
-                      'Complete Website Text Data', 'Extract Text from PDF Link',
-                      'Main Website PDF Data along with Embedded Links PDF Data',
-                      'Complete Website PDF Data', 'Complete Website Text and PDF Data',
-                      'Download PDF Files From Main Website','Download All PDF Files From Website',
-                      'Download Image Files From Main Website','Download All Image Files From Website'])
 
-# Selecting Function according to utility
-if utility == 'Embedded Links':
-    embedded_links(link)
+# Main Function for Code
+if __name__ == "__main__":
 
-elif utility == 'Main Website Text Data':
-    main_website_text_Data(link)
+    # First argument takes the title of the Selection Box
+    # Second argument takes options
+    utility = st.selectbox("Utility: ",
+                           ['Embedded Links', 'Main Website Text Data',
+                            'Main Website Text Data along with Embedded Links Text Data',
+                            'Complete Website Text Data', 'Extract Text from PDF Link',
+                            'Main Website PDF Data along with Embedded Links PDF Data',
+                            'Complete Website PDF Data', 'Complete Website Text and PDF Data',
+                            'Download PDF Files From Main Website', 'Download All PDF Files From Website',
+                            'Download Image Files From Main Website', 'Download All Image Files From Website'])
 
-elif utility == 'Complete Website Text Data':
-    complete_text_data(link)
+    # Selecting Function according to utility
+    if utility == 'Embedded Links':
+        embedded_links(link)
 
-elif utility == 'Main Website Text Data along with Embedded Links Text Data':
-    main_website_text_embedded_link_text_Data(link)
+    elif utility == 'Main Website Text Data':
+        main_website_text_Data(link)
 
-elif utility == 'Extract Text from PDF Link':
-    PDF_link_data(link)
+    elif utility == 'Complete Website Text Data':
+        complete_text_data(link)
 
-elif utility == 'Main Website PDF Data along with Embedded Links PDF Data':
-    main_website_PDF_embedded_link_PDF_Data(link)
+    elif utility == 'Main Website Text Data along with Embedded Links Text Data':
+        main_website_text_embedded_link_text_Data(link)
 
-elif utility == 'Complete Website PDF Data':
-    complete_PDF_data(link)
+    elif utility == 'Extract Text from PDF Link':
+        PDF_link_data(link)
 
-elif utility == 'Complete Website Text and PDF Data':
-    complete_text_pdf_Data(link)
+    elif utility == 'Main Website PDF Data along with Embedded Links PDF Data':
+        main_website_PDF_embedded_link_PDF_Data(link)
 
-elif utility == 'Download PDF Files From Main Website':
-    main_download_PDF_Files(link)
-    download_button_PDF()
-    fname = 'Zip_File_PDF.zip'
-    remove_files(fname)
+    elif utility == 'Complete Website PDF Data':
+        complete_PDF_data(link)
 
-elif utility == 'Download All PDF Files From Website':
-    complete_download_PDF_Files(link)
-    download_button_PDF()
-    fname = 'Zip_File_PDF.zip'
-    remove_files(fname)
+    elif utility == 'Complete Website Text and PDF Data':
+        complete_text_pdf_Data(link)
 
-elif utility == 'Download Image Files From Main Website':
-    main_download_Image_Files(link)
-    download_button_Image()
-    fname = 'Zip_File_Image.zip'
-    remove_files(fname)
+    elif utility == 'Download PDF Files From Main Website':
+        main_download_PDF_Files(link)
+        download_button_PDF()
+        fname = 'Zip_File_PDF.zip'
+        remove_files(fname)
 
-else:
-    complete_download_Image_Files(link)
-    download_button_Image()
-    fname = 'Zip_File_Image.zip'
-    remove_files(fname)
+    elif utility == 'Download All PDF Files From Website':
+        complete_download_PDF_Files(link)
+        download_button_PDF()
+        fname = 'Zip_File_PDF.zip'
+        remove_files(fname)
 
-# For Closing Button
-# Function to handle app closure and file removal
-# Check a condition to close the app
+    elif utility == 'Download Image Files From Main Website':
+        main_download_Image_Files(link)
+        download_button_Image()
+        fname = 'Zip_File_Image.zip'
+        remove_files(fname)
 
-try:
+    else:
+        complete_download_Image_Files(link)
+        download_button_Image()
+        fname = 'Zip_File_Image.zip'
+        remove_files(fname)
 
-    if st.button("Close App"):
-        
-        st.experimental_clear_cache()
+    # For Closing Button
+    # Function to handle app closure and file removal
+    # Check a condition to close the app
 
-        # Close the app
-        st.stop()
+    try:
 
-except:
-    pass
+        if st.button("Close App"):
+            st.experimental_clear_cache()
+
+            # Close the app
+            st.stop()
+    
+    except:
+        pass
