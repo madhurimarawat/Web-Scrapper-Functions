@@ -26,9 +26,6 @@ import os
 # Set a maximum size for the zip file in bytes
 MAX_ZIP_FILE_SIZE = 1024 * 1024 * 100  # 100 MB
 
-# Set a maximum number of files to include in the zip file
-MAX_ZIP_FILE_COUNT = 50
-
 # Adding Title
 st.title("Web Scraper")
 
