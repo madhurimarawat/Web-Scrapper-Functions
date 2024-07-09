@@ -12,31 +12,31 @@ Streamlit-based Python web scraper for text, images, and PDFs. User-friendly int
 
 <h2>Pycharm</h2>
 
---> Visit the official website of pycharm: <a href="https://www.jetbrains.com/pycharm/"><img src="https://th.bing.com/th/id/R.c936445e15a65dfdba20a63e14e7df39?rik=fqWqO9kKIVlK7g&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f58481537cef1014c0b5e4968.png&ehk=dtrTKn1QsJ3%2b2TFlSfLR%2fxHdNYHdrqqCUUs8voipcI8%3d&risl=&pid=ImgRaw&r=0" title="PyCharm" alt="PyCharm" width="40" height="40"></a><br><br>
---> Download according to the platform that will be used like Linux, Macos or Windows.<br><br>
---> Two versions of Pycharm are avilable-
-1. Community version <br><br>
---> Community version is open source and we can use it for free without any paid plan.<br><br>
---> We can download this at the end of pycharm website.<br><br>
---> After downloading community version we can directly follow the setup wizard and it will be setup.<br><br>
-2.  Professional Version.<br><br>
---> This is available at the top of website, we can directly download from there.<br><br>
---> After downloading professional version, follow the below steps.<br><br>
---> Follow the setup wizard and sign up for the free version (trial version) or else continue with the premium or paid version.<br>
+- Visit the official website of pycharm: <a href="https://www.jetbrains.com/pycharm/"><img src="https://th.bing.com/th/id/R.c936445e15a65dfdba20a63e14e7df39?rik=fqWqO9kKIVlK7g&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f58481537cef1014c0b5e4968.png&ehk=dtrTKn1QsJ3%2b2TFlSfLR%2fxHdNYHdrqqCUUs8voipcI8%3d&risl=&pid=ImgRaw&r=0" title="PyCharm" alt="PyCharm" width="40" height="40"></a><br>
+- Download according to the platform that will be used like Linux, Macos or Windows.<br>
+Two versions of Pycharm are available:<br>
+1. **Community version** <br>
+- Community version is open source and we can use it for free without any paid plan.<br>
+- We can download this at the end of pycharm website.<br>
+- After downloading community version we can directly follow the setup wizard and it will be setup.<br><br>
+2. **Professional Version**<br>
+- This is available at the top of website, we can directly download from there.<br>
+- After downloading professional version, follow the below steps.<br>
+- Follow the setup wizard and sign up for the free version (trial version) or else continue with the premium or paid version.<br>
 
 ### Using Pycharm
---> First, in pycharm we have the concept of virtual environment. In virtual environment we can install all the required libraries or frameworks.<br><br>
---> Each project has its own virtual environment, so thath we can install requirements like Libraries or Framworks for that project only.<br><br>
---> After this we can create a new file, various file types are available in pycharm like script files, text files and also Jupyter Notebooks.<br><br>
---> After selecting the required file type, we can continue the execution of that file by saving it and using this shortcut shift+F10 (In Windows).<br><br>
---> Output is given in Console while installation happens in terminal in Pycharm.
+- First, in pycharm we have the concept of virtual environment. In virtual environment we can install all the required libraries or frameworks.<br>
+- Each project has its own virtual environment, so thath we can install requirements like Libraries or Framworks for that project only.<br>
+- After this we can create a new file, various file types are available in pycharm like script files, text files and also Jupyter Notebooks.<br>
+- After selecting the required file type, we can continue the execution of that file by saving it and using this shortcut shift+F10 (In Windows).<br>
+- Output is given in Console while installation happens in terminal in Pycharm.
 
 ## Streamlit Server
 
---> Streamlit is a python framework through which we can deploy any machine learning model and any python project with ease and without worrying about the frontend.<br><br>
---> Streamlit is very user-friendly.<br><br>
---> Streamlit has pre defined functions for all frontend components and we can directly use them.<br><br>
---> To install streamlit in your system, just run this command-
+- Streamlit is a python framework through which we can deploy any machine learning model and any python project with ease and without worrying about the frontend.<br>
+- Streamlit is very user-friendly.<br>
+- Streamlit has pre defined functions for all frontend components and we can directly use them.<br>
+- To install streamlit in your system, just run this command-
 
 ```
 pip install streamlit
@@ -63,14 +63,14 @@ You should be able to view the homepage of your app.
 
 ## Deploying using Streamlit
 
-1. Visit the official website of streamlit : <a href="https://streamlit.io/"><img src="https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png" title="Streamlit" alt="Streamlit" width="40" height="40"></a> <br><br>
-2. Now make an account with GitHub.<br><br>
-3. Now add all the code in Github repository.<br><br>
-4. Go to streamlit and there is an option for new deployment.<br><br>
-5. Type your Github repository name and specify the file name. If you name your file as streamlit_app it will directly access it else you have to specify the path.<br><br>
-6. Now also make sure you upload all your libraries and requirement name in a requirement.txt file.<br><br>
-7. Version can also be mentioned like this python==3.9.<br><br>
-8. When we mention version in the requirement file streamlit install all dependencies from there.<br><br>
+1. Visit the official website of streamlit : <a href="https://streamlit.io/"><img src="https://seeklogo.com/images/S/streamlit-logo-1A3B208AE4-seeklogo.com.png" title="Streamlit" alt="Streamlit" width="40" height="40"></a> <br>
+2. Now make an account with GitHub.<br>
+3. Now add all the code in Github repository.<br>
+4. Go to streamlit and there is an option for new deployment.<br>
+5. Type your Github repository name and specify the file name. If you name your file as streamlit_app it will directly access it else you have to specify the path.<br>
+6. Now also make sure you upload all your libraries and requirement name in a requirement.txt file.<br>
+7. Version can also be mentioned like this python==3.9.<br>
+8. When we mention version in the requirement file streamlit install all dependencies from there.<br>
 9. If everything went well our app will be deployed on web and you can share the link and access the app from all browsers.
 
 ---
@@ -79,44 +79,43 @@ You should be able to view the homepage of your app.
 
 <p>Complete Description about the project and resources used.</p>
 
---> **Embedded Links:**
-  Extracts and provides embedded links within a website.<br><br>
+- **Embedded Links:**
+  Extracts and provides embedded links within a website.<br>
 
---> **Main Website Text Data:**
-  Gathers and presents the primary textual content from the main website.<br><br>
+- **Main Website Text Data:**
+  Gathers and presents the primary textual content from the main website.<br>
 
---> **Main Website Text Data along with Embedded Links Text Data:**
-  Combines main website text data with text data from embedded links.<br><br>
+- **Main Website Text Data along with Embedded Links Text Data:**
+  Combines main website text data with text data from embedded links.<br>
 
---> **Complete Website Text Data:**
-  Retrieves and displays the entire textual content of the website.<br><br>
+- **Complete Website Text Data:**
+  Retrieves and displays the entire textual content of the website.<br>
 
---> **Extract Text from PDF Link:**
-  Retrieves and extract data of PDF file using the PDF Link Provided.<br><br>
+- **Extract Text from PDF Link:**
+  Retrieves and extract data of PDF file using the PDF Link Provided.<br>
 
---> **Main Website PDF Data along with Embedded Links PDF Data:**
- Merge Text data extracted from PDF file in the main website with PDF data extracted from embedded links.<br><br>
+- **Main Website PDF Data along with Embedded Links PDF Data:**
+ Merge Text data extracted from PDF file in the main website with PDF data extracted from embedded links.<br>
 
---> **Complete Website PDF Data:**
-  Captures and retrieves the PDF data available across the entire website.<br><br>
+- **Complete Website PDF Data:**
+  Captures and retrieves the PDF data available across the entire website.<br>
 
---> **Complete Website Text and PDF Data:**
-  Presents a comprehensive view of both textual and PDF data from the entire website.<br><br>
+- **Complete Website Text and PDF Data:**
+  Presents a comprehensive view of both textual and PDF data from the entire website.<br>
 
---> **Download PDF Files From Main Website:**
-  Facilitates the selective download of PDF files from the main website.<br><br>
+- **Download PDF Files From Main Website:**
+  Facilitates the selective download of PDF files from the main website.<br>
 
---> **Download All PDF Files From Website:**
-  Enables the bulk download of all PDF files available on the website.<br><br>
+- **Download All PDF Files From Website:**
+  Enables the bulk download of all PDF files available on the website.<br>
 
---> **Download Image Files From Main Website:**
-  Allows the selective download of image files from the main website.<br><br>
+- **Download Image Files From Main Website:**
+  Allows the selective download of image files from the main website.<br>
 
---> **Download All Image Files From Website:**
-  Supports the bulk download of all image files present on the website.<br><br>
+- **Download All Image Files From Website:**
+  Supports the bulk download of all image files present on the website.<br>
 
---> Visit Website from : <a href="https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/">Web Scraper</a>
-
+- Visit Website from : <a href="https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/">Web Scraper</a>
 
 ---
 ## Libraries Used 📚 💻
@@ -142,6 +141,12 @@ pip install library_name
 
   <li><b>Zipfile:</b> Python module for creating, extracting, and manipulating ZIP archives, essential for efficient data storage and transfer tasks.</li>
 </ul>
+
+---
+## Web Scraper Limitations
+
+The web app has a limit of 100MB. Once this limit is reached, the app will not be able to scrape additional content. If you need to scrape more content, please run the app locally.
+
 
 ---
 
