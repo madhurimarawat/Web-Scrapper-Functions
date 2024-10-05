@@ -601,7 +601,6 @@ def complete_download_PDF_Files(link):
 
 
 # Function for downloading Image
-# Function for downloading Image
 def download_Image(link, name):
     try:
         response = requests.get(link)
