@@ -576,7 +576,7 @@ def complete_download_PDF_Files(link):
                 link = link.replace("../../", "https://")
             name = link.split("/")[-1].replace(" ", "_")
             link = link.replace(" ", "%20")
-            download_PDF(link, name, ZIP_PDF_FILENAME, link)
+            download_PDF(link, name, ZIP_PDF_FILENAME)
             visited_links.append(link)
 
         elif link_type == "img":
