@@ -5,3 +5,4 @@ lxml == 4.9.3
 bs4 == 0.0.1
 PyPDF2 == 3.0.1
 protobuf==3.20.3
+altair==4.2.0
