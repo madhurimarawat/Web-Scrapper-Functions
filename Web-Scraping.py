@@ -764,8 +764,8 @@ def remove_files(fname):
         pass
 
 
-# Main Function for Code
-if __name__ == "__main__":
+# Main Function for Code execution
+def main():
 
     # First argument takes the title of the Selection Box
     # Second argument takes options
@@ -850,3 +850,40 @@ if __name__ == "__main__":
 
     except:
         pass
+
+
+# Function to include background image and opacity
+def display_background_image(url, opacity):
+    """
+    Displays a background image with a specified opacity on the web app using CSS.
+
+    Args:
+    - url (str): URL of the background image.
+    - opacity (float): Opacity level of the background image.
+    """
+    # Set background image using HTML and CSS
+    st.markdown(
+        f"""
+        <style>
+            body {{
+                background: url('{url}') no-repeat center center fixed;
+                background-size: cover;
+                opacity: {opacity};
+            }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+# Running the main function
+if __name__ == "__main__":
+
+    # Call function to display the background image with opacity
+    display_background_image(
+        "https://analyticsdrift.com/wp-content/uploads/2022/12/web-scraping-tools.jpg",
+        0.8,
+    )
+
+    # Call main function to run the app
+    main()
