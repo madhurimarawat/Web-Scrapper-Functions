@@ -765,27 +765,7 @@ def remove_files(fname):
 
 
 # Main Function for Code execution
-def main():
-
-    # First argument takes the title of the Selection Box
-    # Second argument takes options
-    utility = st.selectbox(
-        "Utility: ",
-        [
-            "Embedded Links",
-            "Main Website Text Data",
-            "Main Website Text Data along with Embedded Links Text Data",
-            "Complete Website Text Data",
-            "Extract Text from PDF Link",
-            "Main Website PDF Data along with Embedded Links PDF Data",
-            "Complete Website PDF Data",
-            "Complete Website Text and PDF Data",
-            "Download PDF Files From Main Website",
-            "Download All PDF Files From Website",
-            "Download Image Files From Main Website",
-            "Download All Image Files From Website",
-        ],
-    )
+def main(utility):
 
     # Selecting Function according to utility
     if utility == "Embedded Links":
@@ -885,5 +865,25 @@ if __name__ == "__main__":
         0.8,
     )
 
+    # First argument takes the title of the Selection Box
+    # Second argument takes options
+    utility = st.selectbox(
+        "Utility: ",
+        [
+            "Embedded Links",
+            "Main Website Text Data",
+            "Main Website Text Data along with Embedded Links Text Data",
+            "Complete Website Text Data",
+            "Extract Text from PDF Link",
+            "Main Website PDF Data along with Embedded Links PDF Data",
+            "Complete Website PDF Data",
+            "Complete Website Text and PDF Data",
+            "Download PDF Files From Main Website",
+            "Download All PDF Files From Website",
+            "Download Image Files From Main Website",
+            "Download All Image Files From Website",
+        ],
+    )
+
     # Call main function to run the app
-    main()
+    main(utility)
