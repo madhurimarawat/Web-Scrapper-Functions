@@ -37,35 +37,6 @@ visited_links = []
 # Set a maximum size for the zip file in bytes
 MAX_ZIP_FILE_SIZE = 1024 * 1024 * 100  # 100 MB
 
-# Adding Title
-st.title("Web Scraper")
-
-# Adding Subheader
-st.subheader("Web Scraper for all Web Scraping Functionalities")
-
-# For writing Text we use text function
-st.text("Enter Website Link and Get all Web Scraping Functions for it.")
-
-# Getting Input from User
-try:
-    link = st.text_input("Enter Website Link")
-
-    # Parse the URL
-    parsed_url = urlparse(link)
-
-    # Split the domain by dots and get the first part
-    # For name after https
-    domain_name = parsed_url.netloc.split(".")[0]
-
-    # If the Website has www in the start instead of domain name
-    if domain_name == "www":
-        domain_name = domain_name = parsed_url.netloc.split(".")[1]
-
-    st.write("Domain Name:", domain_name.capitalize())
-
-except:
-    st.write("Please Give Valid URL")
-
 
 # Send an HTTP request to the URL of the webpage we want to access
 # Defining Function for Requesting Access to link/Establishing Connection
@@ -764,6 +735,31 @@ def remove_files(fname):
         pass
 
 
+def user_input():
+
+    # Getting Input from User
+    try:
+        link = st.text_input("Enter Website Link")
+
+        # Parse the URL
+        parsed_url = urlparse(link)
+
+        # Split the domain by dots and get the first part
+        # For name after https
+        domain_name = parsed_url.netloc.split(".")[0]
+
+        # If the Website has www in the start instead of domain name
+        if domain_name == "www":
+            domain_name = domain_name = parsed_url.netloc.split(".")[1]
+
+        st.write("Domain Name:", domain_name.capitalize())
+
+        return link
+
+    except:
+        st.write("Please Give Valid URL")
+
+
 # Main Function for Code execution
 def main(utility):
 
@@ -871,6 +867,17 @@ if __name__ == "__main__":
         0.8,
     )
 
+    # Adding Title
+    st.title("Web Scraper")
+
+    # Adding Subheader
+    st.subheader("Web Scraper for all Web Scraping Functionalities")
+
+    # For writing Text we use text function
+    st.text("Enter Website Link and Get all Web Scraping Functions for it.")
+
+    link = user_input()
+
     # First argument takes the title of the Selection Box
     # Second argument takes options
     utility = st.selectbox(
@@ -892,4 +899,4 @@ if __name__ == "__main__":
     )
 
     # Call main function to run the app
-    main(utility)
+    main(utility, link)
