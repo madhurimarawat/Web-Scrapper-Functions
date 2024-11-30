@@ -761,7 +761,7 @@ def user_input():
 
 
 # Main Function for Code execution
-def main(utility):
+def main(utility, link):
 
     # Selecting Function according to utility
     if utility == "Embedded Links":
