@@ -1,10 +1,10 @@
 # Web-Scrapper-Functions
 Streamlit-based Python web scraper for text, images, and PDFs. User-friendly interface for quick data extraction from websites. Simplify your web scraping tasks effortlessly.
 
-<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/user-attachments/assets/241f6c1c-b459-4e09-881b-86864896fd14" title = "Website Image" alt="Website Image"></a>
+<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/user-attachments/assets/f935ec1b-b973-49fe-9fae-5fc9340134f1" title = "Website Image" alt="Website Image"></a>
 <br><br>
 
-<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/user-attachments/assets/b7c9bd61-3986-4bd8-be5e-c088a3ea6447" title = "Website Image" alt="Website Image"></a>
+<a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/user-attachments/assets/ac0346dc-d798-4e6b-8ce4-883abd46755c" title = "Website Image" alt="Website Image"></a>
 <br><br>
 
 <a href = "https://web-scrapper-functions-h6phqofpkjtaylwyn9uvzf.streamlit.app/"><img width="927" src="https://github.com/madhurimarawat/Web-Scrapper-Functions/assets/105432776/885e212d-42dc-4530-a4c3-f4a3c8df59ab" title = "Text File Image" alt="Text File Image"></a>
