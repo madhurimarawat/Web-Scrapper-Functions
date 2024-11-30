@@ -736,6 +736,7 @@ def remove_files(fname):
 
 
 def user_input():
+    global link, domain_name  # Declare link and domain_name as global variables
 
     # Getting Input from User
     try:
@@ -750,18 +751,19 @@ def user_input():
 
         # If the Website has www in the start instead of domain name
         if domain_name == "www":
-            domain_name = domain_name = parsed_url.netloc.split(".")[1]
+            domain_name = parsed_url.netloc.split(".")[1]
 
         st.write("Domain Name:", domain_name.capitalize())
 
-        return link
+        return link, domain_name
 
-    except:
+    except Exception as e:
         st.write("Please Give Valid URL")
+        st.write(f"Error: {e}")
 
 
 # Main Function for Code execution
-def main(utility, link):
+def main(utility):
 
     # Selecting Function according to utility
     if utility == "Embedded Links":
@@ -876,7 +878,8 @@ if __name__ == "__main__":
     # For writing Text we use text function
     st.text("Enter Website Link and Get all Web Scraping Functions for it.")
 
-    link = user_input()
+    # Taking User Input
+    user_input()
 
     # First argument takes the title of the Selection Box
     # Second argument takes options
@@ -899,4 +902,4 @@ if __name__ == "__main__":
     )
 
     # Call main function to run the app
-    main(utility, link)
+    main(utility)
