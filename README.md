@@ -80,7 +80,7 @@ You should be able to view the homepage of your app.
 
 ## About Project :
 
-<p>Complete Description about the project and resources used.</p>
+<p>Complete Description about the project features.</p>
 
 - **Embedded Links:**
   Extracts and provides embedded links within a website.<br>
